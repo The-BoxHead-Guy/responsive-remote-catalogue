@@ -2,13 +2,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
-  background-color: #f5f5f5;
   margin: 0;
   padding: 0; }
 
 body {
   height: 100%;
   font-family: "Poppins", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  background-color: #f5f5f5; }
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 32px 32px;
+  background: linear-gradient(180deg, #2e64d9 0%, #121e3f 100%);
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25); }
+  .introduction__frame--nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .introduction__frame--nav ul li {
+      padding: 6px 8px;
+      list-style: none; }
+    .introduction__frame--nav ul li h2 {
+      color: #f5f5f5;
+      font-size: 24px;
+      font-weight: 700; }
+  .introduction__frame--nav.logo {
+    width: 88px;
+    height: 88px;
+    position: relative;
+    top: 5px; }
 
 /*# sourceMappingURL=main.css.map */
