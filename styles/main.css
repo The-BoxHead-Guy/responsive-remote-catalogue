@@ -15,8 +15,11 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 0px 0px 32px 32px;
-  background: linear-gradient(180deg, #2e64d9 0%, #121e3f 100%);
+  background: linear-gradient(180deg, #3272fb 0%, #121e3f 100%);
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25); }
+  .introduction__frame--nav.title {
+    flex-basis: 16em;
+    text-align: center; }
   .introduction__frame--nav ul {
     display: flex;
     justify-content: flex-start;
