@@ -10,6 +10,8 @@ $primary-color: #3272fb;
 $secondary-color: #f5f5f5;
 $tertiary-color: #121e3f;
 
+$soft-borders: 2em;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body {
@@ -19,15 +21,18 @@ body {
   background-color: $secondary-color;
 }
 
+//* introduction section */
+
 .introduction {
   display: flex;
   flex-direction: column;
 
-  border-radius: 0px 0px 32px 32px;
+  border-radius: 0px 0px $soft-borders $soft-borders;
   background: linear-gradient(180deg, $primary-color 0%, $tertiary-color 100%);
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25);
 
   padding-bottom: 2em;
+  gap: 1em;
 
   &__frame {
     &--nav {
@@ -93,9 +98,78 @@ body {
     iframe {
       background-color: #f5f5f5;
       min-width: 80%;
-      height: 300px;
-      border-radius: 32px;
+      height: 400px;
+      border-radius: $soft-borders;
       margin-bottom: 1em;
+    }
+  }
+}
+
+//* Location section //
+
+.location {
+  width: 100%;
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    align-self: center;
+    padding: 1em;
+
+    h2 {
+      text-transform: capitalize;
+    }
+  }
+
+  &__map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    iframe {
+      width: 90%;
+      height: 400px;
+      border-radius: $soft-borders;
+      border: none;
+      box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+//* brand messages section */
+
+.brand-messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  margin: 5em 0 2.5em 0;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-direction: column;
+    width: 90%;
+    gap: 1em;
+    background: linear-gradient(
+      180deg,
+      $primary-color 0%,
+      $tertiary-color 100%
+    );
+    border-radius: $soft-borders;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin: 0px 0 0 2em;
+      padding: 2em;
+      color: white;
     }
   }
 }
