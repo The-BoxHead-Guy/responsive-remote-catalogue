@@ -60,6 +60,35 @@ body {
           font-size: 24px;
           font-weight: 700;
         }
+
+        .icon {
+          text-decoration: none;
+
+          &.whatsapp {
+            margin-left: auto;
+            margin-right: 2%;
+          }
+
+          &.instagram {
+            margin-right: 5%;
+          }
+
+          a i.bi {
+            font-size: 2em;
+            color: $tertiary-color;
+            transition: all 0.2s ease-in-out;
+
+            &.bi-whatsapp:hover {
+              color: #25d366;
+              font-size: 2.2em;
+            }
+
+            &.bi-instagram:hover {
+              color: #c32aa3;
+              font-size: 2.2em;
+            }
+          }
+        }
       }
 
       &.logo {

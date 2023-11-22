@@ -35,6 +35,23 @@ body {
       color: #f5f5f5;
       font-size: 24px;
       font-weight: 700; }
+    .introduction__frame--nav ul .icon {
+      text-decoration: none; }
+      .introduction__frame--nav ul .icon.whatsapp {
+        margin-left: auto;
+        margin-right: 2%; }
+      .introduction__frame--nav ul .icon.instagram {
+        margin-right: 5%; }
+      .introduction__frame--nav ul .icon a i.bi {
+        font-size: 2em;
+        color: #121e3f;
+        transition: all 0.2s ease-in-out; }
+        .introduction__frame--nav ul .icon a i.bi.bi-whatsapp:hover {
+          color: #25d366;
+          font-size: 2.2em; }
+        .introduction__frame--nav ul .icon a i.bi.bi-instagram:hover {
+          color: #c32aa3;
+          font-size: 2.2em; }
   .introduction__frame--nav.logo {
     width: 88px;
     height: 88px;
