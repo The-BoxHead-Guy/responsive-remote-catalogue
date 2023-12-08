@@ -1,0 +1,242 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Poppins:wght@400;700&display=swap");
+/* variables */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; }
+
+nav.catalogue__nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e224f; }
+  nav.catalogue__nav header {
+    width: 100%; }
+    nav.catalogue__nav header h1 {
+      color: #f5f5f5;
+      text-align: left;
+      padding: 1em;
+      margin: 0 auto;
+      letter-spacing: 2px;
+      font-size: 1.5em;
+      font-weight: 700; }
+
+section.catalogue {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  height: 300px;
+  background-color: #2d61d6;
+  transition: all 0.5s ease-in-out; }
+  section.catalogue div.catalogue__container.image {
+    width: 40%;
+    height: 100%; }
+    section.catalogue div.catalogue__container.image figure {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: inherit; }
+      section.catalogue div.catalogue__container.image figure img {
+        width: 260px;
+        height: inherit; }
+  section.catalogue div.catalogue__container.product-desc {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    position: relative; }
+    section.catalogue div.catalogue__container.product-desc :where(h2, p) {
+      text-align: right; }
+    section.catalogue div.catalogue__container.product-desc h2 {
+      color: #ffffff;
+      padding: 0.5em 0.5em 0.5em 0;
+      margin-left: auto;
+      font-family: josefin slab;
+      font-weight: bold;
+      font-size: 2em; }
+    section.catalogue div.catalogue__container.product-desc p {
+      display: inline-block;
+      padding: 0;
+      margin: 0 1em 0 0;
+      font-family: sans-serif;
+      font-size: 1.5em; }
+    section.catalogue div.catalogue__container.product-desc p.catalogue__container--price {
+      color: #f4fbff;
+      font-weight: bold;
+      padding-bottom: 0.5em; }
+    section.catalogue div.catalogue__container.product-desc > a.catalogue__container--buy-button {
+      border: none;
+      border-radius: 2em;
+      background-color: #143c92;
+      padding: 0.3em 1.7em;
+      font-size: 1.5em;
+      margin: 0 1em 0.5em 0;
+      transition: all 0.2s ease;
+      font-weight: bold;
+      text-decoration: none; }
+      section.catalogue div.catalogue__container.product-desc > a.catalogue__container--buy-button:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #182856; }
+      section.catalogue div.catalogue__container.product-desc > a.catalogue__container--buy-button:visited {
+        color: #f5f5f5; }
+  section.catalogue#reversed {
+    flex-flow: row-reverse nowrap;
+    background-color: #121e3f; }
+    section.catalogue#reversed div.catalogue__container.image {
+      background-color: #121e3f; }
+    section.catalogue#reversed div.catalogue__container.product-desc {
+      align-items: flex-start;
+      padding-left: 1.5em; }
+      section.catalogue#reversed div.catalogue__container.product-desc :where(h2, p) {
+        text-align: left; }
+      section.catalogue#reversed div.catalogue__container.product-desc h2 {
+        margin-right: auto;
+        margin-left: 0;
+        text-align: left;
+        color: #f5f5f5; }
+      section.catalogue#reversed div.catalogue__container.product-desc p {
+        color: #3272fb;
+        margin: 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc p.catalogue__container--price {
+        color: #f5f5f5; }
+      section.catalogue#reversed div.catalogue__container.product-desc > a.catalogue__container--buy-button {
+        background-color: #f5f5f5;
+        color: #121e3f; }
+        section.catalogue#reversed div.catalogue__container.product-desc > a.catalogue__container--buy-button:visited {
+          color: #121e3f; }
+        section.catalogue#reversed div.catalogue__container.product-desc > a.catalogue__container--buy-button:hover {
+          cursor: pointer;
+          color: white;
+          background-color: #182856; }
+
+@media screen and (min-width: 567px) and (max-width: 1024px) {
+  section.catalogue {
+    flex-flow: column nowrap;
+    height: auto;
+    transition: all 0.7s ease-in-out;
+    width: 100%;
+    padding: 0.75em; }
+    section.catalogue div.catalogue__container.product-desc {
+      width: 80%;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0; }
+      section.catalogue div.catalogue__container.product-desc > h2 {
+        margin: 0; }
+      section.catalogue div.catalogue__container.product-desc > p {
+        text-align: center; }
+      section.catalogue div.catalogue__container.product-desc h2 {
+        padding: 0;
+        text-align: center;
+        padding: 0.5em 0; }
+      section.catalogue div.catalogue__container.product-desc p {
+        text-align: center;
+        padding: 0;
+        margin: 0; }
+      section.catalogue div.catalogue__container.product-desc p.catalogue__container--price {
+        padding: 0.5em 0; }
+      section.catalogue div.catalogue__container.product-desc > a.catalogue__container--buy-button {
+        margin: 0.25em 0; }
+      section.catalogue div.catalogue__container.product-desc > h2 {
+        font-size: 2.5em;
+        font-weight: 700; }
+
+  section.catalogue#reversed {
+    flex-flow: column nowrap;
+    height: auto; }
+    section.catalogue#reversed div.catalogue__container.product-desc {
+      width: 80%;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc > h2 {
+        margin: 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc > p {
+        text-align: center; }
+      section.catalogue#reversed div.catalogue__container.product-desc h2 {
+        padding: 0;
+        text-align: center;
+        padding: 0.5em 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc p {
+        text-align: center;
+        padding: 0;
+        margin: 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc p.catalogue__container--price {
+        padding: 0.5em 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc > a.catalogue__container--buy-button {
+        margin: 0.25em 0; } }
+@media screen and (max-width: 567px) {
+  nav.catalogue__nav > header > h1 {
+    text-align: center; }
+
+  section.catalogue {
+    flex-flow: column nowrap;
+    height: auto;
+    width: 100%;
+    padding: 1em; }
+    section.catalogue div.catalogue__container.product-desc {
+      width: 100%;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0; }
+      section.catalogue div.catalogue__container.product-desc > h2 {
+        margin: 0; }
+      section.catalogue div.catalogue__container.product-desc > p {
+        text-align: center; }
+      section.catalogue div.catalogue__container.product-desc h2 {
+        padding: 0;
+        text-align: center;
+        padding: 0.5em 0; }
+      section.catalogue div.catalogue__container.product-desc p {
+        text-align: center;
+        padding: 0;
+        margin: 0; }
+      section.catalogue div.catalogue__container.product-desc p.catalogue__container--price {
+        padding: 0.5em 0; }
+      section.catalogue div.catalogue__container.product-desc > a.catalogue__container--buy-button {
+        margin: 0.25em 0; }
+      section.catalogue div.catalogue__container.product-desc > p {
+        font-size: 1.2em; }
+      section.catalogue div.catalogue__container.product-desc > p.catalogue__container--price {
+        font-size: 1.5em; }
+
+  section.catalogue#reversed {
+    flex-flow: column nowrap;
+    height: auto; }
+    section.catalogue#reversed div.catalogue__container.product-desc {
+      width: 100%;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0;
+      padding: 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc > h2 {
+        margin: 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc > p {
+        text-align: center; }
+      section.catalogue#reversed div.catalogue__container.product-desc h2 {
+        padding: 0;
+        text-align: center;
+        padding: 0.5em 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc p {
+        text-align: center;
+        padding: 0;
+        margin: 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc p.catalogue__container--price {
+        padding: 0.5em 0; }
+      section.catalogue#reversed div.catalogue__container.product-desc > a.catalogue__container--buy-button {
+        margin: 0.25em 0; } }
+
+/*# sourceMappingURL=catalogue.css.map */
