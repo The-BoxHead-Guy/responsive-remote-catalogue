@@ -1,0 +1,21 @@
+@mixin wa-link-message($color: #f5f5f5) {
+  &:link {
+    text-decoration: none;
+    color: $color;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    text-decoration: none;
+    color: $color;
+  }
+}

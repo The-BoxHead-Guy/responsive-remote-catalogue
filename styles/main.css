@@ -45,14 +45,12 @@ body {
         margin-right: 5%; }
       .introduction__frame--nav ul .icon a i.bi {
         font-size: 2em;
-        color: #121e3f;
+        color: #f5f5f5;
         transition: all 0.2s ease-in-out; }
         .introduction__frame--nav ul .icon a i.bi.bi-whatsapp:hover {
-          color: #25d366;
-          font-size: 2.2em; }
+          color: #25d366; }
         .introduction__frame--nav ul .icon a i.bi.bi-instagram:hover {
-          color: #c32aa3;
-          font-size: 2.2em; }
+          color: #c32aa3; }
   .introduction__frame--nav.logo {
     width: 88px;
     height: 88px;
@@ -119,25 +117,36 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     background: linear-gradient(180deg, #3272fb 0%, #121e3f 100%);
     border-radius: 2em; }
+    .brand-messages__box--link-message:link {
+      text-decoration: none;
+      color: #f4fc2d;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out; }
+    .brand-messages__box--link-message:hover {
+      text-decoration: underline; }
+    .brand-messages__box--link-message:active {
+      text-decoration: underline; }
+    .brand-messages__box--link-message:visited {
+      text-decoration: none;
+      color: #f4fc2d; }
     .brand-messages__box--title {
       color: #f5f5f5;
       font-size: 1.5em;
       font-weight: bold;
       text-align: center;
-      padding: 1em; }
+      padding: 2em 1em 1em 1em; }
     .brand-messages__box ul {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 0.6em;
       margin: 0px 0 0 2em;
       padding: 2em;
       color: white; }
-      .brand-messages__box ul li > p span.sistema-apartado {
-        color: #f4fc2d;
-        text-transform: capitalize; }
+      .brand-messages__box ul li {
+        font-size: 18px; }
       .brand-messages__box ul li > p span.usd {
         color: #6df1a6; }
       .brand-messages__box ul li > p span.zelle {
@@ -152,20 +161,29 @@ body {
       align-items: center;
       gap: 0.5em; }
     .brand-messages__box--action {
-      padding: 1em;
+      padding: 1.5em;
       background-color: #121e3f;
       border-radius: 2em;
       margin-bottom: 2em;
       transition: all 0.2s ease-in-out; }
+      .brand-messages__box--action:link {
+        text-decoration: none;
+        color: #f5f5f5; }
       .brand-messages__box--action:hover {
         transform: scale(1.05);
         box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25);
         background-color: #3272fb;
         cursor: pointer; }
+      .brand-messages__box--action:active {
+        transform: scale(0.95); }
+      .brand-messages__box--action:visite {
+        text-decoration: none;
+        color: #f5f5f5; }
       .brand-messages__box--action p > a {
         text-decoration: none;
         color: #f5f5f5;
         font-weight: bold;
+        font-size: 18px;
         display: flex;
         gap: 0.5em; }
     .brand-messages__box--icon {
@@ -202,6 +220,16 @@ footer.footer {
       position: relative;
       top: 1px;
       font-size: 1.5em; }
+    footer.footer p.footer__copyright a[href="#beraca-electronic"]:link {
+      text-decoration: none;
+      color: #3272fb; }
+    footer.footer p.footer__copyright a[href="#beraca-electronic"]:hover {
+      text-decoration: underline; }
+    footer.footer p.footer__copyright a[href="#beraca-electronic"]:active {
+      text-decoration: underline; }
+    footer.footer p.footer__copyright a[href="#beraca-electronic"]:visited {
+      text-decoration: none;
+      color: #3272fb; }
   footer.footer__made-text {
     font-weight: bold; }
 
@@ -224,6 +252,8 @@ footer.footer {
     padding-top: 2em; }
 
   section.brand-messages div.brand-messages__box ul {
-    gap: 1.8em; } }
+    gap: 1.8em; }
+    section.brand-messages div.brand-messages__box ul li {
+      font-size: 16px; } }
 
 /*# sourceMappingURL=main.css.map */

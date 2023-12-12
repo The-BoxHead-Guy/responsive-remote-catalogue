@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 
 /* reset style */
 * {
@@ -64,17 +65,15 @@ body {
 
           a i.bi {
             font-size: 2em;
-            color: $tertiary-color;
+            color: $secondary-color;
             transition: all 0.2s ease-in-out;
 
             &.bi-whatsapp:hover {
               color: #25d366;
-              font-size: 2.2em;
             }
 
             &.bi-instagram:hover {
               color: #c32aa3;
-              font-size: 2.2em;
             }
           }
         }
@@ -176,7 +175,7 @@ body {
     align-items: center;
 
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     background: linear-gradient(
       180deg,
       $primary-color 0%,
@@ -184,27 +183,32 @@ body {
     );
     border-radius: $soft-borders;
 
+    // CTA Link
+    &--link-message {
+      @include wa-link-message(#f4fc2d);
+    }
+
     &--title {
       color: $secondary-color;
       font-size: 1.5em;
       font-weight: bold;
       text-align: center;
-      padding: 1em;
+      padding: 2em 1em 1em 1em;
     }
 
     ul {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 0.6em;
       margin: 0px 0 0 2em;
       padding: 2em;
       color: white;
 
+      & li {
+        font-size: 18px;
+      }
+
       & li > p span {
-        &.sistema-apartado {
-          color: #f4fc2d;
-          text-transform: capitalize;
-        }
         &.usd {
           color: #6df1a6;
         }
@@ -228,12 +232,17 @@ body {
     }
 
     &--action {
-      padding: 1em;
+      padding: 1.5em;
       background-color: $tertiary-color;
       border-radius: $soft-borders;
       margin-bottom: 2em;
 
       transition: all 0.2s ease-in-out;
+
+      &:link {
+        text-decoration: none;
+        color: $secondary-color;
+      }
 
       &:hover {
         transform: scale(1.05);
@@ -242,10 +251,20 @@ body {
         cursor: pointer;
       }
 
+      &:active {
+        transform: scale(0.95);
+      }
+
+      &:visite {
+        text-decoration: none;
+        color: $secondary-color;
+      }
+
       p > a {
         text-decoration: none;
         color: $secondary-color;
         font-weight: bold;
+        font-size: 18px;
 
         display: flex;
         gap: 0.5em;
@@ -302,6 +321,26 @@ footer.footer {
       top: 1px;
       font-size: 1.5em;
     }
+
+    & a[href="#beraca-electronic"] {
+      &:link {
+        text-decoration: none;
+        color: $primary-color;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        text-decoration: underline;
+      }
+
+      &:visited {
+        text-decoration: none;
+        color: $primary-color;
+      }
+    }
   }
 
   &__made-text {
@@ -340,6 +379,10 @@ footer.footer {
     & div.brand-messages__box {
       ul {
         gap: 1.8em;
+
+        & li {
+          font-size: 16px;
+        }
       }
     }
   }
