@@ -181,7 +181,15 @@ section.catalogue {
       font-weight: bold;
       text-decoration: none;
 
+      &:link {
+        color: $secondary-color;
+      }
+
       &:hover {
+        @include hover-change();
+      }
+
+      &:active {
         @include hover-change();
       }
 
