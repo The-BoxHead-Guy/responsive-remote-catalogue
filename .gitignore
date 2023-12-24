@@ -1,2 +1,5 @@
 *.map
 *.sass-cache
+
+js-experiment.html
+js/experiment.js
