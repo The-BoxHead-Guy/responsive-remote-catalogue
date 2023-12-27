@@ -1,0 +1,17 @@
+.catalogue {
+  height: 320px !important; }
+  .catalogue .catalogue__container.image figure img.smartphones {
+    width: 260px;
+    height: 100%;
+    padding: 30px; }
+  .catalogue .catalogue__container.product-desc p.spec {
+    font-size: 1.3em; }
+  .catalogue .catalogue__container.product-desc p.catalogue__container--price {
+    margin-top: 0.5em; }
+
+.catalogue#reversed .catalogue__container.product-desc p.spec {
+  font-size: 1.3em; }
+.catalogue#reversed p.catalogue__container--price {
+  margin-top: 0.5em !important; }
+
+/*# sourceMappingURL=catalogue-smartphones.css.map */

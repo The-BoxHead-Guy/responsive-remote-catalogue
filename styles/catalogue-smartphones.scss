@@ -1,0 +1,35 @@
+// Fixing smartphones image
+.catalogue {
+  height: 320px !important;
+  & .catalogue__container.image {
+    & figure {
+      & img.smartphones {
+        width: 260px;
+        height: 100%;
+        padding: 30px;
+      }
+    }
+  }
+
+  & .catalogue__container.product-desc {
+    & p.spec {
+      font-size: 1.3em;
+    }
+
+    & p.catalogue__container--price {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+.catalogue#reversed {
+  & .catalogue__container.product-desc {
+    & p.spec {
+      font-size: 1.3em;
+    }
+  }
+
+  & p.catalogue__container--price {
+    margin-top: 0.5em !important;
+  }
+}
