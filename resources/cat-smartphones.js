@@ -1,5 +1,7 @@
+import { renderHTML } from "./template.js";
+
 // Variables
-let smartphones = [
+let products = [
   {
     name: "Tecno Spark GO 2024",
     image: "/img/catalogue/smartphones/spark-2024.png",
@@ -99,27 +101,27 @@ let smartphones = [
 ];
 
 // Function to create the HTML template for each smartphone
-function generateSmartphone(smartphone) {
+function generateProduct(product) {
   return `
       <div class="catalogue__container image">
         <figure>
           <img
-            src="${smartphone.image}"
-            alt="${smartphone.name}"
+            src="${product.image}"
+            alt="${product.name}"
             class="smartphones"
           />
         </figure>
       </div>
       <div class="catalogue__container product-desc">
-        <h2>${smartphone.name}</h2>
-        <p class="spec">${smartphone.infoScreen}</p>
-        <p class="spec">${smartphone.infoStorage}</p>
-        <p class="spec">${smartphone.infoAndroidVer}</p>
-        <p class="spec">${smartphone.infoChipset}</p>
-        <p class="spec">${smartphone.infoCamera}</p>
-        <p class="catalogue__container--price">Precio: ${smartphone.price}</p>
+        <h2>${product.name}</h2>
+        <p class="spec">${product.infoScreen}</p>
+        <p class="spec">${product.infoStorage}</p>
+        <p class="spec">${product.infoAndroidVer}</p>
+        <p class="spec">${product.infoChipset}</p>
+        <p class="spec">${product.infoCamera}</p>
+        <p class="catalogue__container--price">Precio: ${product.price}</p>
         <a
-          href="${smartphone.msgUrl}"
+          href="${product.msgUrl}"
           target="_blank"
           class="catalogue__container--buy-button"
           >Comprar</a
@@ -127,25 +129,5 @@ function generateSmartphone(smartphone) {
       </div>`;
 }
 
-// Render the HTML template for each smartphone
-function renderHTML(smartphones) {
-  const body = document.querySelector("body");
-
-  for (let i = 0; i < smartphones.length; i++) {
-    const section = document.createElement("section");
-    section.classList.add("catalogue");
-
-    const smartphone = smartphones[i];
-    const addHTML = generateSmartphone(smartphone);
-
-    if (i % 2 == 1) {
-      section.setAttribute("id", "reversed");
-    }
-
-    section.innerHTML = addHTML;
-    body.appendChild(section);
-  }
-}
-
 // Call the renderHTML function
-renderHTML(smartphones);
+renderHTML(generateProduct, products);
