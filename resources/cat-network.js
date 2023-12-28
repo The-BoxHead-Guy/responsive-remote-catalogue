@@ -1,3 +1,5 @@
+import { renderHTML } from "./template.js";
+
 // Variables
 let products = [
   {
@@ -21,7 +23,7 @@ let products = [
 ];
 
 // Function to create the HTML template for each smartphone
-function generateSmartphone(product) {
+function generateProduct(product) {
   return `
       <div class="catalogue__container image">
         <figure>
@@ -46,25 +48,5 @@ function generateSmartphone(product) {
       </div>`;
 }
 
-// Render the HTML template for each smartphone
-function renderHTML(products) {
-  const body = document.querySelector("body");
-
-  for (let i = 0; i < products.length; i++) {
-    const section = document.createElement("section");
-    section.classList.add("catalogue");
-
-    const product = products[i];
-    const addHTML = generateSmartphone(product);
-
-    if (i % 2 == 1) {
-      section.setAttribute("id", "reversed");
-    }
-
-    section.innerHTML = addHTML;
-    body.appendChild(section);
-  }
-}
-
 // Call the renderHTML function
-renderHTML(products);
+renderHTML(generateProduct, products);
