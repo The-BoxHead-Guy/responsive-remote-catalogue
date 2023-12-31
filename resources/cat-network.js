@@ -82,7 +82,7 @@ let products = [
       "https://wa.me/584244235920?text=Quiero%20comprar%20el%20router%20%22Switch%20de%20escritorio%20%28Mercusys%29%22",
     desc1: "Protector de corriente | Power Bank | Fuente ininterrumpida",
     desc2: "<strong>10.000 mAh</strong> | Puertos 5V, 8V, 12V",
-    price: "$40",
+    price: "$35",
   },
   {
     name: "Adaptador Wi-Fi (TP-LINK)",
